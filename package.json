@@ -1,0 +1,23 @@
+{
+  "name": "biorhythm-chart",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@kaze-style/react": "^0.10.4",
+    "frappe-charts": "^1.6.2",
+    "preact": "^10.11.2",
+    "react-date-picker": "^9.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@preact/preset-vite": "^2.4.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.3"
+  }
+}
