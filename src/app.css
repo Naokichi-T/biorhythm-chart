@@ -1,0 +1,43 @@
+header {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #f8f8ff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main {
+  padding: 16px;
+}
+
+td {
+  padding: 4px 12px;
+}
+
+label {
+  display: block;
+  font-weight: normal;
+}
+
+input[type="date"] {
+  width: 140px;
+  height: 32px;
+  padding: 0 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: transparent;
+  font: inherit;
+}
+
+input[type="checkbox"] {
+  scale: 1.25;
+  accent-color: #745399;
+}
+
+.checkbox-label {
+  padding: 4px;
+}

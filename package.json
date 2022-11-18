@@ -6,17 +6,23 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "analyze": "vite build --mode analyze"
   },
   "dependencies": {
     "@kaze-style/react": "^0.10.4",
+    "dayjs": "^1.11.6",
     "frappe-charts": "^1.6.2",
     "preact": "^10.11.2",
-    "react-date-picker": "^9.1.0"
+    "react-date-picker": "^9.1.0",
+    "react-datepicker": "^4.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
+    "@fullhuman/postcss-purgecss": "^5.0.0",
     "@preact/preset-vite": "^2.4.0",
+    "@types/react-datepicker": "^4.8.0",
+    "rollup-plugin-visualizer": "^5.8.3",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
   }
