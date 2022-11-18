@@ -27,9 +27,8 @@ input[type="date"] {
   width: 140px;
   height: 32px;
   padding: 0 4px;
-  border: 1px solid #ccc;
+  border: 1px solid gray;
   border-radius: 4px;
-  background-color: transparent;
   font: inherit;
 }
 
