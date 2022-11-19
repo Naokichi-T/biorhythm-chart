@@ -34,7 +34,7 @@ export function App() {
     <>
       <header>バイオリズムチャート</header>
       <main>
-        <BiorhythmChart {...chartProps} />
+        {birthDate && targetDate && <BiorhythmChart {...chartProps} />}
         <Form {...formProps} />
         <small>
           ※バイオリズムはあくまで疑似科学です。（
