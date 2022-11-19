@@ -1,4 +1,5 @@
 import { StateUpdater, useCallback } from "preact/hooks";
+import "./Form.css";
 
 type FormProps = {
   birthDate: string;

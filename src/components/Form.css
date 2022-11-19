@@ -1,0 +1,26 @@
+td {
+  padding: 4px 12px;
+}
+
+label {
+  display: block;
+  font-weight: normal;
+}
+
+input[type="date"] {
+  width: 140px;
+  height: 32px;
+  padding: 0 4px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  font: inherit;
+}
+
+input[type="checkbox"] {
+  scale: 1.25;
+  accent-color: #745399;
+}
+
+.checkbox-label {
+  padding: 4px;
+}
