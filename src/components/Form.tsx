@@ -13,20 +13,34 @@ type FormProps = {
 export const Form = (props: FormProps) => {
   const { birthDate, setBirthDate, targetDate, setTargetDate, allowSave, setAllowSave } = props;
 
-  const handleInputBirthDate = useCallback((e: Event) => {
-    const target = e.target as HTMLInputElement;
-    setBirthDate(target.value);
-  }, []);
+  const handleInputBirthDate = useCallback(
+    (e: Event) => {
+      const target = e.target as HTMLInputElement;
+      setBirthDate(target.value);
+      if (allowSave) {
+        localStorage.setItem("birthDate", target.value);
+      }
+    },
+    [allowSave]
+  );
 
   const handleInputTargetDate = useCallback((e: Event) => {
     const target = e.target as HTMLInputElement;
     setTargetDate(target.value);
   }, []);
 
-  const handleSave = useCallback((e: Event) => {
-    const target = e.target as HTMLInputElement;
-    setAllowSave(target.checked);
-  }, []);
+  const handleSave = useCallback(
+    (e: Event) => {
+      const target = e.target as HTMLInputElement;
+      setAllowSave(target.checked);
+      if (target.checked) {
+        localStorage.setItem("birthDate", birthDate);
+      } else {
+        localStorage.removeItem("birthDate");
+      }
+    },
+    [birthDate]
+  );
 
   return (
     <form class={classes.form}>
