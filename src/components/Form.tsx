@@ -1,5 +1,5 @@
 import { StateUpdater, useCallback } from "preact/hooks";
-import "./Form.css";
+import classes from "./Form.module.css";
 
 type FormProps = {
   birthDate: string;
@@ -29,7 +29,7 @@ export const Form = (props: FormProps) => {
   }, []);
 
   return (
-    <form>
+    <form class={classes.form}>
       <table>
         <tr>
           <th>
@@ -41,7 +41,7 @@ export const Form = (props: FormProps) => {
           <th>
             <input type="checkbox" id="save" defaultChecked={allowSave} onInput={(e) => handleSave(e)} />
           </th>
-          <td class="checkbox-label">
+          <td class={classes.checkboxLabel}>
             <label htmlFor="save">保存する</label>
           </td>
         </tr>

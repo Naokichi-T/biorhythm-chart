@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import { Chart } from "react-google-charts";
-import "./BiorhythmChart.css";
+import classes from "./BiorhythmChart.module.css";
 
 type ChartProps = {
   birthDate: string;
@@ -28,7 +28,7 @@ export const BiorhythmChart = (props: ChartProps) => {
     vAxis: { ticks: [], title: "" },
   };
   return (
-    <div class="container">
+    <div class={classes.container}>
       <div>{formatDate(targetDate)}</div>
       <Chart chartType="LineChart" width="100%" height="100%" data={data} options={options} />
       <div>
