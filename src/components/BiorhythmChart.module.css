@@ -9,3 +9,12 @@
   border-radius: 4px;
   background-color: white;
 }
+
+.container table {
+  line-height: 1.25;
+}
+
+.container td {
+  padding: 0px 4px;
+  text-align: end;
+}

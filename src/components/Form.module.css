@@ -2,11 +2,6 @@
   padding: 4px 12px;
 }
 
-.form label {
-  display: block;
-  font-weight: normal;
-}
-
 .form input[type="date"] {
   width: 140px;
   height: 32px;

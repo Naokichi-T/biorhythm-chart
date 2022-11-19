@@ -12,3 +12,7 @@ header {
 main {
   padding: 16px;
 }
+
+th {
+  font-weight: normal;
+}
