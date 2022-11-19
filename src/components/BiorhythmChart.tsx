@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import { Chart } from "react-google-charts";
-import { getCalculateBiorhythmData } from "../calculations";
+import { getCalculateBiorhythmData, calculateBiorhythms } from "../calculations";
 import classes from "./BiorhythmChart.module.css";
 
 type ChartProps = {
@@ -32,6 +32,7 @@ export const BiorhythmChart = (props: ChartProps) => {
   const { birthDate, targetDate } = props;
   const startDate = dayjs(targetDate).subtract(15, "days").toISOString();
   const data = getCalculateBiorhythmData(birthDate, startDate, 31);
+  const bioRhythms = calculateBiorhythms(birthDate, targetDate);
 
   return (
     <div class={classes.container}>
@@ -40,15 +41,15 @@ export const BiorhythmChart = (props: ChartProps) => {
       <table>
         <tr style={{ color: "seagreen" }}>
           <th>身体:</th>
-          <td>0.50</td>
+          <td>{bioRhythms.physical}</td>
         </tr>
         <tr style={{ color: "tomato" }}>
           <th>感情:</th>
-          <td>0.10</td>
+          <td>{bioRhythms.emotional}</td>
         </tr>
         <tr style={{ color: "royalblue" }}>
           <th>知性:</th>
-          <td>-0.20</td>
+          <td>{bioRhythms.intellectual}</td>
         </tr>
       </table>
     </div>
