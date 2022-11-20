@@ -16,3 +16,8 @@ main {
 th {
   font-weight: normal;
 }
+
+.react-date-picker__wrapper {
+  border-radius: 4px;
+  background-color: white;
+}

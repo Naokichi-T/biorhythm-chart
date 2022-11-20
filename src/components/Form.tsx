@@ -1,4 +1,5 @@
 import { StateUpdater, useCallback } from "preact/hooks";
+import DatePicker from "react-date-picker";
 import classes from "./Form.module.css";
 
 type FormProps = {
@@ -50,7 +51,8 @@ export const Form = (props: FormProps) => {
             <label htmlFor="birthDate">誕生日</label>
           </th>
           <td>
-            <input type="date" id="birthDate" defaultValue={birthDate} onInput={(e) => handleInputBirthDate(e)} />
+            {/* <input type="date" id="birthDate" defaultValue={birthDate} onInput={(e) => handleInputBirthDate(e)} /> */}
+            <DatePicker onChange={() => handleInputBirthDate} value={new Date(birthDate)} />
           </td>
           <th>
             <input type="checkbox" id="save" defaultChecked={allowSave} onInput={(e) => handleSave(e)} />
