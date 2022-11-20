@@ -11,9 +11,13 @@
   },
   "dependencies": {
     "dayjs": "^1.11.6",
+    "i": "^0.3.7",
+    "npm": "^9.1.2",
     "preact": "^10.11.2",
     "react-date-picker": "^9.1.0",
-    "react-google-charts": "^4.0.0"
+    "react-google-charts": "^4.0.0",
+    "react-mobile-datepicker": "^4.0.2",
+    "react-mobile-datepicker-ts": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
